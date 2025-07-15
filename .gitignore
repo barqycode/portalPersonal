@@ -1,6 +1,12 @@
-# .gitignore
 node_modules/
-*.log
-.DS_Store
-.env
 vendor/
+.env
+*.log
+*.zip
+*.bak
+*.tmp
+*.swp
+*.sqlite
+.DS_Store
+.idea/
+.vscode/
