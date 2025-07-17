@@ -41,12 +41,13 @@ let baseCameraY = camera.position.y;
 // Control de scroll
 let targetRotation = 0;
 let currentRotation = 0;
-
+/*
 window.addEventListener('scroll', () => {
   targetRotation = window.scrollY * 0.02; // Ajusta velocidad de rotación
   // Compensación del scroll moviendo la cámara (no la espiral)
   camera.position.y = baseCameraY - window.scrollY * 0.01; // Ajusta este valor para mayor/menor movimiento
 });
+
 
 // Animación
 const animate = () => {
@@ -58,6 +59,14 @@ const animate = () => {
   
   renderer.render(scene, camera);
 };
+*/
+// Animación continua
+const animate = () => {
+  requestAnimationFrame(animate);
+  spiral.rotation.y += 0.002; // Rotación constante
+  renderer.render(scene, camera);
+};
+
 animate();
 
 // Responsive
